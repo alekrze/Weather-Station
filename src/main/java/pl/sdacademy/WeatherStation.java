@@ -8,9 +8,12 @@ package pl.sdacademy;
 // Powinna również zawierać metodę start, która w "wiecznej"
 // pętli będzie co 5 sekund sprawdzała pogodę (na razie co 5
 // sekund niech wypisuje w konsoli "aktualizacja").
-public class WeatherStation {
-    private Weather currentWeather;
 
+//Będziemy w aplikacji używali tylko jednej instancji tej klasy.
+
+public enum WeatherStation {
+    INSTANCE;
+    private Weather currentWeather;
 
     public void start() {
         while (true) {
