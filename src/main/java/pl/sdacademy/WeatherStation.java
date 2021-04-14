@@ -24,6 +24,10 @@ public enum WeatherStation {
     private Weather currentWeather;
     private WeatherProvider weatherProvider;
 
+    public void setWeatherProvider(WeatherProvider weatherProvider) {
+        this.weatherProvider = weatherProvider;
+    }
+
     WeatherStation() {
         this.weatherProvider = new RandomWeatherGernerator();
     }
